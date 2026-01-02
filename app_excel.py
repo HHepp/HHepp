@@ -2,7 +2,9 @@ import streamlit as st
 import pandas as pd
 import os
 from datetime import datetime
-
+# --- 메인 로직 시작 & 브라우저 명 ---
+st.set_page_config(page_title="업무 기록_Lordnine", page_icon="🌟", layout="wide")
+    
 # --- 설정 및 암호 ---
 EXCEL_FILE = 'Py1.xlsx'
 PASSWORD = "0421" # 로그인 암호
@@ -57,12 +59,6 @@ def load_all_excel_files(folder_path):
     else:
         return pd.DataFrame()
         
-# --- 메인 로직 시작 & 브라우저 명 ---
-st.set_page_config(
-    page_title="업무 기록_Lordnine",
-    page_icon="🌟",
-    layout="wide")
-
 if check_password():
     # 로그인 성공 시에만 아래 코드가 실행됩니다.
     init_excel()
