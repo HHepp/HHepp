@@ -3,6 +3,14 @@ import pandas as pd
 import os
 from datetime import datetime
 
+
+# --- 파비콘 X, 브라우저 명 ---
+st.set_page_config(
+    page_title="업무 기록_Lordnine",
+    page_icon="🌟"
+)
+
+
 # --- 설정 및 암호 ---
 EXCEL_FILE = 'Py1.xlsx'
 PASSWORD = "0421" # 로그인 암호
