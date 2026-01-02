@@ -2,11 +2,6 @@ import streamlit as st
 import pandas as pd
 import os
 from datetime import datetime
-# --- 파비콘 X, 브라우저 명 ---
-st.set_page_config(
-    page_title="업무 기록_Lordnine",
-    page_icon="🌟"
-)
 
 # --- 설정 및 암호 ---
 EXCEL_FILE = 'Py1.xlsx'
@@ -29,15 +24,15 @@ def check_password():
         return True
 
     # 로그인 화면 UI
-    st.title("🔒 암호 입력")
-    password_input = st.text_input("암호를 입력하세요", type="password")
+    st.title("암호")
+    password_input = st.text_input("Password", type="password")
     
-    if st.button("로그인"):
+    if st.button("->"):
         if password_input == PASSWORD:
             st.session_state["password_correct"] = True
             st.rerun()
         else:
-            st.error("암호가 틀렸습니다.")
+            st.error("암호 틀림..")
     return False
 
 # 폴더 내 모든 엑셀 파일 불러와서 합치기
@@ -62,8 +57,11 @@ def load_all_excel_files(folder_path):
     else:
         return pd.DataFrame()
         
-# --- 메인 로직 시작 ---
-st.set_page_config(page_title="보안 엑셀 매니저", layout="wide")
+# --- 메인 로직 시작 & 브라우저 명 ---
+st.set_page_config(
+    page_title="업무 기록_Lordnine",
+    page_icon="🌟"
+    layout="wide")
 
 if check_password():
     # 로그인 성공 시에만 아래 코드가 실행됩니다.
