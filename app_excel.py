@@ -7,7 +7,7 @@ st.set_page_config(page_title="업무 기록_Lordnine", page_icon="🌟", layout
     
 # --- 설정 및 암호 ---
 EXCEL_FILE = 'Py1.xlsx'
-PASSWORD = "0421" # 로그인 암호
+PASSWORD = "04" # 로그인 암호
 SOURCE_FOLDER = "DHM_업무기록"
 
 # 엑셀 초기화 함수
