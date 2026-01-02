@@ -60,7 +60,7 @@ def load_all_excel_files(folder_path):
 # --- 메인 로직 시작 & 브라우저 명 ---
 st.set_page_config(
     page_title="업무 기록_Lordnine",
-    page_icon="🌟"
+    page_icon="🌟",
     layout="wide")
 
 if check_password():
